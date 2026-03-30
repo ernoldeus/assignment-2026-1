@@ -68,11 +68,6 @@ def main():
             total_neg_log_likelihood += -log_prob
             total_predicted_tokens += 1
 
-    mean_nll = total_neg_log_likelihood / total_predicted_tokens
-    perplexity = math.exp(mean_nll)
-    with open(args.output_file, "w", encoding="utf-8") as f:
-        f.write(f"{perplexity}\n")
-
 
 if __name__ == "__main__":
     main()
